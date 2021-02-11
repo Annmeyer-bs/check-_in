@@ -22,5 +22,5 @@ elseif
 	$mysqli->query("INSERT INTO `user`( `full_name`,`email`,`login`, `password`) VALUES('$full_name','$email','$login','$password')");
 	$mysqli->close();
 
-	header('Location:	http://localhost/PHP/index.php');
+	header('Location:	/check_in/index.php');
 	?>
