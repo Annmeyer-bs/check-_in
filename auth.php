@@ -17,5 +17,5 @@ FILTER_SANITIZE_STRING);
 	setcookie('user',$user['full_name'],	time()	+3600,	"/");
 	$mysqli->close();
 
-	header('Location:	/PHP/index.php');
+	header('Location:	/check_in/index.php');
 	?>
