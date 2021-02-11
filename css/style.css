@@ -1,0 +1,35 @@
+
+body{
+    background-color: white;
+    color: rgb(53, 53, 40)3, 63, 63;
+}
+
+button{
+    margin:10px 0px;
+    padding: 6px 18px;
+    border:solid    1px;
+    cursor: pointer;
+  
+}
+button:hover{
+    background-color: rgb(37, 185, 18);
+
+  
+}
+
+.container {
+    margin: 100px auto 0;
+	padding: 25px 16px 25px 10px;
+	font-weight: 400;
+
+	width: 350px;
+	height: auto;
+	background: #fff;
+	box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.13);
+  
+    }
+    h1, h2{
+        margin: 0;
+        text-align: center;
+    }
+    
