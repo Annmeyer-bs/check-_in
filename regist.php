@@ -29,12 +29,9 @@ if($_SESSION['user']){
         <p>Зарегистрированы? 
             <a href="index.php">Ввойти</a>
         </p>
-
     </form>
     </div>
     </div>
-    
-
 
 </body>
 </html>
