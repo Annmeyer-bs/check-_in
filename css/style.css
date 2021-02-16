@@ -1,35 +1,64 @@
-
+*{
+    box-sizing: border-box;
+}
 body{
-    background-color: white;
-    color: rgb(53, 53, 40)3, 63, 63;
+   
+    align-items: center;
 }
-
-button{
-    margin:10px 0px;
-    padding: 6px 18px;
-    border:solid    1px;
-    cursor: pointer;
-  
+form{
+    margin:  0;
+    padding: 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
 }
-button:hover{
-    background-color: rgb(37, 185, 18);
-
-  
+a{
+    font-weight: bold;
+    text-decoration: none;
 }
-
-.container {
-    margin: 100px auto 0;
-	padding: 25px 16px 25px 10px;
-	font-weight: 400;
-
-	width: 350px;
-	height: auto;
-	background: #fff;
-	box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.13);
-  
-    }
-    h1, h2{
-        margin: 0;
-        text-align: center;
-    }
+p{
+    margin: 0;
+}
+input{
+    margin:4px;
+    padding:4px;  
+    border: unset;
+    border-bottom: 1px  solid #e3e3e3;
     
+}
+button{
+    padding: 0px;
+    background: #e3e3e3;
+    border: unset;
+    cursor: pointer;
+}
+.msg{
+    border: 2px solid   #e3e3e3;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    background: rgb(255, 255, 255);
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  td {
+    color: #669;
+    padding: 0;
+    transition: .3s linear;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+
+  }
+  tr:hover td {
+    color: #6699ff;
+  }
+.edit{
+  width: 100px;
+}

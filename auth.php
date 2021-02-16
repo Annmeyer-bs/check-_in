@@ -1,21 +1,33 @@
 <?php
-
-$login=filter_var(trim($_POST['login']),
-FILTER_SANITIZE_STRING);
-$password=filter_var(trim($_POST['password']),
-FILTER_SANITIZE_STRING);
-
+session_start();
+require_once	'connect.php';
 	
-	$mysqli = new mysqli('localhost', 'root', 'root', 'bd');
-	$result=$mysqli->query("SELECT *	FROM	`user`	WHERE	`login`='$login'	AND	`password`='$password'");
-	$user=$result->fetch_assoc();
-	if(count($user)==0)	{
-		echo	"Такой	пользователь	не	найден";
-	exit();
+$login=$_POST['login'];
+$password=$_POST['password'];
+
+$check_user=mysqli_query($connect,"SELECT	*	FROM	`user`	WHERE	`login`='$login'	AND	`password`='$password'");
+
+if(mysqli_num_rows($check_user)>0){
+$user=mysqli_fetch_assoc($check_user);
+$_SESSION['user']=[
+	"id"	=>	$user['id'],
+	"full_name"	=>	$user['full_name'],
+	"ava"	=>	$user['ava'],
+	"email"	=>	$user['email'],
+	"phone"	=>	$user['phone'],
+	"admin"	=>	$user['admin'],
+	"ban"	=>	$user['ban']];
+	if($_SESSION['user']['ban']>0){
+		$_SESSION['Message']=' Вы были забанены';
+	header('Location:	/check_in2/index.php');}
+	if($_SESSION['user']['admin']>0){
+		header('Location:	/check_in2/admin.php');
 	}
-	
-	setcookie('user',$user['full_name'],	time()	+3600,	"/");
-	$mysqli->close();
-
-	header('Location:	/PHP/index.php');
+else
+{	header('Location:	/check_in2/lk.php');
+}
+}
+else{
+$_SESSION['Message']='Неверный	логин	или	пароль';
+header('Location:	/check_in2/index.php');}
 	?>

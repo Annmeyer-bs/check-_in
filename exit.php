@@ -1,4 +1,6 @@
 <?php
-	setcookie('user',$user['full_name'],	time()	-3600,	"/");
-	header('Location:	/PHP/index.php');
-	?>
+session_start();
+unset($_SESSION['user']);
+    (header('Location:  /check_in2/index.php'));
+
+?>

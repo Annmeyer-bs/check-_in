@@ -1,4 +1,9 @@
-
+<?php
+session_start();
+if($_SESSION['user']){
+    (header('Location:  /check_in2/lk.php'));
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,10 +14,6 @@
 <body>
 
     <div class="container">
-        
-    <?php
-    if($_COOKIE['user']==''):
-       ?>
     <div class="container__login">
     <h1>Вход</h1>
     <form action="auth.php"  method="POST">
@@ -22,12 +23,18 @@
         <input class="input"  name="password" type="password" placeholder="Введите пароль"><br>
         <button type="submit">Вход</button><br>
         <a href="regist.php">Регистрация</a>
+        
+        
+        <?php
+        if($_SESSION['Message']){
+            echo    ' <p  class="msg">'   .  $_SESSION['Message']    .'</p> ';
+        }
+        unset($_SESSION['Message']);
+        ?>
+        
     </form>
     </div>
-    <?php   
-    else:?>
-    <P>Привет,   <?=$_COOKIE['user']?>. Чтобы  выйти   нажмите   <a href="exit.php">здесь.</a> </P>
-    <?php   endif;?>
+
     </div>
 
 </body>

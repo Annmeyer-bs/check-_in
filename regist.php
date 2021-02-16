@@ -1,4 +1,9 @@
-
+<?php
+session_start();
+if($_SESSION['user']){
+    (header('Location:  /check_in2/lk.php'));
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
