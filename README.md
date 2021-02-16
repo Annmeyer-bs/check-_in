@@ -1,2 +1,2 @@
 # check_in
-+-20hours
++-24hours
