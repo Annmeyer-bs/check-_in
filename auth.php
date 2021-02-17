@@ -23,7 +23,6 @@ $_SESSION['user']=[
 	if($_SESSION['user']['admin']>0){
 		header('Location:	/check_in2/admin.php');
 	}
-<<<<<<< HEAD
 else
 {	header('Location:	/check_in2/lk.php');
 }
@@ -32,11 +31,3 @@ else{
 $_SESSION['Message']='Неверный	логин	или	пароль';
 header('Location:	/check_in2/index.php');}
 	?>
-=======
-	
-	setcookie('user',$user['full_name'],	time()	+3600,	"/");
-	$mysqli->close();
-
-	header('Location:	/check_in/index.php');
-	?>
->>>>>>> 1854e9c1eb0cdc12a7fc7399489fb57ed16b5f0f
