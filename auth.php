@@ -24,10 +24,10 @@ $_SESSION['user']=[
 		header('Location:	/check_in2/admin.php');
 	}
 else
-{	header('Location:	/check_in2/lk.php');
+{	header('Location:	lk.php');
 }
 }
 else{
 $_SESSION['Message']='Неверный	логин	или	пароль';
-header('Location:	/check_in2/index.php');}
+header('Location:	index.php');}
 	?>
