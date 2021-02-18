@@ -1,7 +1,6 @@
 <?php
-<<<<<<< HEAD
 session_start();
 unset($_SESSION['user']);
-    (header('Location:  /check_in2/index.php'));
+    (header('Location:  index.php'));
 
 ?>
