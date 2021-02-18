@@ -2,7 +2,7 @@
 session_start();
 require_once	'connect.php';
 if($_SESSION['user']['admin']=0){
-    (header('Location:  /check_in2/lk.php'));
+    (header('Location:  lk.php'));
 }
 ?>
 <!doctype html>
@@ -31,8 +31,6 @@ if($_SESSION['user']['admin']=0){
     if (isset($_GET['red_id'])) {
       $sql = mysqli_query($connect, "SELECT `id`, `admin`, `ban` FROM `user` WHERE `id`={$_GET['red_id']}");
       $us = mysqli_fetch_array($sql);
-   // }
- //>
  echo '
 <h3>Измениние  данных</h3>
   <form action="" class="edit" method="post">
