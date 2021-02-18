@@ -9,6 +9,6 @@ $password=$_POST['password'];
 
 mysqli_query($connect,"INSERT INTO `user`( `full_name`,`email`,`login`, `password`) VALUES('$full_name','$email','$login','$password')");
 
-<<<<<<< HEAD
 $_SESSION['Message']='Регистрация	прошла	успешна';
-header('Location:	/check_in2/index.php');
+header('Location:	index.php');
+?>
