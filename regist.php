@@ -1,7 +1,7 @@
 <?php
 session_start();
 if($_SESSION['user']){
-    (header('Location:  /check_in2/lk.php'));
+    (header('Location:  lk.php'));
 }
 ?>
 <!DOCTYPE html>
