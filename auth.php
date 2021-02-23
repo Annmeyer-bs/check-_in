@@ -19,9 +19,9 @@ $_SESSION['user']=[
 	"ban"	=>	$user['ban']];
 	if($_SESSION['user']['ban']>0){
 		$_SESSION['Message']=' Вы были забанены';
-	header('Location:	/check_in2/index.php');}
+	header('Location:	index.php');}
 	if($_SESSION['user']['admin']>0){
-		header('Location:	/check_in2/admin.php');
+		header('Location:	admin.php');
 	}
 else
 {	header('Location:	lk.php');
